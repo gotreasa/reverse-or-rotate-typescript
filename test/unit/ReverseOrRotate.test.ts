@@ -1,8 +1,11 @@
-import Dummy from '../../src/Dummy';
+import reverseOrRotate from '../../src/ReverseOrRotate';
 
-describe('Check the Dummy class is working', () => {
-  test('should have a class object valid set to true', () => {
-    const dummy = new Dummy();
-    expect(dummy.valid).toBe(true);
+describe('Reverse or Rotate', () => {
+  test('should return "" when the input is "" with any size', () => {
+    expect(reverseOrRotate('', 4)).toBe('');
+  });
+
+  test('should return 234561 when the input is 123456', () => {
+    expect(reverseOrRotate('123456', 4)).toBe('234561');
   });
 });
