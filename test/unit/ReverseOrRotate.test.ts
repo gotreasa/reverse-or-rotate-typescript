@@ -1,4 +1,4 @@
-import reverseOrRotate from '../../src/ReverseOrRotate';
+import reverseOrRotate, { cubedReducer } from '../../src/ReverseOrRotate';
 
 describe('Reverse or Rotate', () => {
   test('should return "" when the input is "" with any size', () => {
@@ -27,5 +27,11 @@ describe('Reverse or Rotate', () => {
 
   test('should return 6443876 when the input is 66443875 and the size is 7', () => {
     expect(reverseOrRotate('66443875', 7)).toBe('6443876');
+  });
+});
+
+describe('Cubed Reducer', () => {
+  test('should return 9 for input of [3]', () => {
+    expect(['3'].reduce(cubedReducer, 0)).toBe(9);
   });
 });
