@@ -7,7 +7,8 @@ export const isEvenWhenSumIsCubed = (input: string) => {
 
   return sum % 2 === 0;
 };
-const getSubstings = (numbers: string, size: number) => {
+
+const getChuncks = (numbers: string, size: number) => {
   let remainingLength = numbers.length;
   let startingPosition = 0;
   const substrings = [];
@@ -24,53 +25,16 @@ const getSubstings = (numbers: string, size: number) => {
 };
 
 const reverseOrRotate = (numbers: string, size: number) => {
-  const substrings = getSubstings(numbers, size);
+  const chunck = getChuncks(numbers, size);
   let result = '';
 
-  substrings.map((substring) => {
-    if (isEvenWhenSumIsCubed(substring)) {
-      result += substring.split('').reverse().join('');
+  chunck.map((chunk) => {
+    if (isEvenWhenSumIsCubed(chunk)) {
+      result += chunk.split('').reverse().join('');
     } else {
-      result += substring.substring(1, size);
-      result += substring[0];
+      result += chunk.substring(1, size);
+      result += chunk[0];
     }
-    // if (substring === '123456' && size === 6) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
-    // if (substring === '987654' && size === 6) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
-    // if (substring === '12346' && size === 5) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
-    // if (substring === '9876' && size === 4) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
-    // if (substring === '66443875' && size === 8) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
-    // if (substring === '6644387' && size === 7) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
-    // if (substring === '66443876' && size === 8) {
-    //   result += '67834466';
-    // }
-    // if (substring === '987653' && size === 6) {
-    //   result += '356789';
-    // }
-    // if (substring === '5630' && size === 4) {
-    //   result += substring.split('').reverse().join('');
-    // }
-    // if (substring === '0065' && size === 4) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
   });
 
   return result;
