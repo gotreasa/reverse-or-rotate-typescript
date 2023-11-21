@@ -14,13 +14,13 @@ export const isEvenWhenSumIsCubed = (input: string): boolean => {
   return sum % 2 === 0;
 };
 
-const getChuncks = (input: string, size: number): Array<string> => {
+const getChunks = (input: string, size: number): Array<string> => {
   let startingPosition: number = 0;
   const chunks: Array<string> = [];
 
   for (
     let remainingLength: number = input.length;
-    remainingLength >= size;
+    remainingLength >= size && size > 0;
     remainingLength -= size
   ) {
     chunks.push(input.substring(startingPosition, startingPosition + size));
@@ -35,7 +35,7 @@ const reverse = (input: string): string => {
 };
 
 const reverseOrRotate = (numbers: string, size: number): string => {
-  const chunck: Array<string> = getChuncks(numbers, size);
+  const chunck: Array<string> = getChunks(numbers, size);
   let result: string = '';
 
   chunck.map((chunk: string) => {
