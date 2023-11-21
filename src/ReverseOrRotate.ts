@@ -7,8 +7,7 @@ export const isEvenWhenSumIsCubed = (input: string) => {
 
   return sum % 2 === 0;
 };
-
-const reverseOrRotate = (numbers: string, size: number) => {
+const getSubstings = (numbers: string, size: number) => {
   let remainingLength = numbers.length;
   let startingPosition = 0;
   const substrings = [];
@@ -20,6 +19,12 @@ const reverseOrRotate = (numbers: string, size: number) => {
     startingPosition += size;
     remainingLength -= size;
   }
+
+  return substrings;
+};
+
+const reverseOrRotate = (numbers: string, size: number) => {
+  const substrings = getSubstings(numbers, size);
   let result = '';
 
   substrings.map((substring) => {
