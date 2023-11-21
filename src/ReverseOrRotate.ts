@@ -24,13 +24,17 @@ const getChuncks = (numbers: string, size: number) => {
   return substrings;
 };
 
+const reverse = (chunk: string) => {
+  return chunk.split('').reverse().join('');
+};
+
 const reverseOrRotate = (numbers: string, size: number) => {
   const chunck = getChuncks(numbers, size);
   let result = '';
 
   chunck.map((chunk) => {
     if (isEvenWhenSumIsCubed(chunk)) {
-      result += chunk.split('').reverse().join('');
+      result += reverse(chunk);
     } else {
       result += chunk.substring(1, size);
       result += chunk[0];
