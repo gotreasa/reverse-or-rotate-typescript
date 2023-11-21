@@ -15,14 +15,16 @@ export const isEvenWhenSumIsCubed = (input: string): boolean => {
 };
 
 const getChuncks = (input: string, size: number): Array<string> => {
-  let remainingLength: number = input.length;
   let startingPosition: number = 0;
   const chunks: Array<string> = [];
 
-  while (remainingLength >= size) {
+  for (
+    let remainingLength: number = input.length;
+    remainingLength >= size;
+    remainingLength -= size
+  ) {
     chunks.push(input.substring(startingPosition, startingPosition + size));
     startingPosition += size;
-    remainingLength -= size;
   }
 
   return chunks;
