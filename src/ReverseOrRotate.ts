@@ -2,9 +2,10 @@ export const cubedReducer = (accumulator: number, currentValue: string) =>
   Math.pow(parseInt(currentValue), 3) + accumulator;
 
 export const isEvenWhenSumIsCubed = (input: string) => {
-  if (input === '5630' || input === '4469') return true;
+  const digits = input.split('');
+  const sum = digits.reduce(cubedReducer, 0);
 
-  return false;
+  return sum % 2 === 0;
 };
 
 const reverseOrRotate = (numbers: string, size: number) => {

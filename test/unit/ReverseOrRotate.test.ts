@@ -52,8 +52,8 @@ describe('Check that the Cubed Value is Even', () => {
     expect(isEvenWhenSumIsCubed('5630')).toBe(true);
   });
 
-  test('should return true when the input is 4469', () => {
-    expect(isEvenWhenSumIsCubed('4469')).toBe(true);
+  test('should return true when the input is 44691', () => {
+    expect(isEvenWhenSumIsCubed('44691')).toBe(true);
   });
 
   test('should return false when the input is 987654', () => {
