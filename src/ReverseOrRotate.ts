@@ -28,43 +28,49 @@ const reverseOrRotate = (numbers: string, size: number) => {
   let result = '';
 
   substrings.map((substring) => {
-    if (substring === '123456' && size === 6) {
-      result += substring.substring(1, size);
-      result += substring[0];
-    }
-    if (substring === '987654' && size === 6) {
-      result += substring.substring(1, size);
-      result += substring[0];
-    }
-    if (substring === '12346' && size === 5) {
-      result += substring.substring(1, size);
-      result += substring[0];
-    }
-    if (substring === '9876' && size === 4) {
-      result += substring.substring(1, size);
-      result += substring[0];
-    }
-    if (substring === '66443875' && size === 8) {
-      result += substring.substring(1, size);
-      result += substring[0];
-    }
-    if (substring === '6644387' && size === 7) {
-      result += substring.substring(1, size);
-      result += substring[0];
-    }
-    if (substring === '66443876' && size === 8) {
-      result += '67834466';
-    }
-    if (substring === '987653' && size === 6) {
-      result += '356789';
-    }
-    if (substring === '5630' && size === 4) {
+    if (isEvenWhenSumIsCubed(substring)) {
       result += substring.split('').reverse().join('');
-    }
-    if (substring === '0065' && size === 4) {
+    } else {
       result += substring.substring(1, size);
       result += substring[0];
     }
+    // if (substring === '123456' && size === 6) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
+    // if (substring === '987654' && size === 6) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
+    // if (substring === '12346' && size === 5) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
+    // if (substring === '9876' && size === 4) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
+    // if (substring === '66443875' && size === 8) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
+    // if (substring === '6644387' && size === 7) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
+    // if (substring === '66443876' && size === 8) {
+    //   result += '67834466';
+    // }
+    // if (substring === '987653' && size === 6) {
+    //   result += '356789';
+    // }
+    // if (substring === '5630' && size === 4) {
+    //   result += substring.split('').reverse().join('');
+    // }
+    // if (substring === '0065' && size === 4) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
   });
 
   return result;

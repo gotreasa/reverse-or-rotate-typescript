@@ -20,16 +20,16 @@ describe('Reverse or Rotate', () => {
     expect(reverseOrRotate('66443875', 8)).toBe('64438756');
   });
 
-  test('should return 23461 when the input is 12346 and the size is 5', () => {
-    expect(reverseOrRotate('12346', 5)).toBe('23461');
+  test('should return 64321 when the input is 12346 and the size is 5', () => {
+    expect(reverseOrRotate('12346', 5)).toBe('64321');
   });
 
-  test('should return 8769 when the input is 987654 and the size is 4', () => {
-    expect(reverseOrRotate('987654', 4)).toBe('8769');
+  test('should return 6789 when the input is 987654 and the size is 4', () => {
+    expect(reverseOrRotate('987654', 4)).toBe('6789');
   });
 
-  test('should return 6443876 when the input is 66443875 and the size is 7', () => {
-    expect(reverseOrRotate('66443875', 7)).toBe('6443876');
+  test('should return 7834466 when the input is 66443875 and the size is 7', () => {
+    expect(reverseOrRotate('66443875', 7)).toBe('7834466');
   });
 
   test('should return 234561876549 when the input is 123456987654 and the size is 6', () => {
@@ -50,6 +50,10 @@ describe('Reverse or Rotate', () => {
 
   test('should return 03650650 when the input is 56300065 and the size is 4', () => {
     expect(reverseOrRotate('56300065', 4)).toBe('03650650');
+  });
+
+  test('should return 0365065073456944 when the input is 563000655734469485 and the size is 4', () => {
+    expect(reverseOrRotate('563000655734469485', 4)).toBe('0365065073456944');
   });
 });
 
