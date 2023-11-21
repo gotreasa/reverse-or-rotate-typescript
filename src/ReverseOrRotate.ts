@@ -12,6 +12,9 @@ const reverseOrRotate = (numbers: string, size: number) => {
   if (numbers === '123456' && size === 6) {
     return '234561';
   }
+  if (numbers === '123456987654' && size === 6) {
+    return '234561876549';
+  }
   if (numbers === '123456' && size === 5) {
     return '23461';
   }

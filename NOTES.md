@@ -30,3 +30,8 @@
 - ✅ the is even check when cubed should return false when the input is 987654
 - ✅ the is even check when cubed should return true when the input is 5630
 - ✅ the is even check when cubed should return true when the input is 4469
+
+## 🍅 Pomodoro 4
+
+- 🚧 should return 234561876549 when the input is 123456987654 and the size is 6
+- ⚠ should return 234561356789 when the input is 123456987653 and the size is 6

@@ -31,6 +31,10 @@ describe('Reverse or Rotate', () => {
   test('should return 6443876 when the input is 66443875 and the size is 7', () => {
     expect(reverseOrRotate('66443875', 7)).toBe('6443876');
   });
+
+  test('should return 234561876549 when the input is 123456987654 and the size is 6', () => {
+    expect(reverseOrRotate('123456987654', 6)).toBe('234561876549');
+  });
 });
 
 describe('Cubed Reducer', () => {
