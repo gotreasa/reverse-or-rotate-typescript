@@ -61,6 +61,10 @@ const reverseOrRotate = (numbers: string, size: number) => {
     if (substring === '5630' && size === 4) {
       result += substring.split('').reverse().join('');
     }
+    if (substring === '0065' && size === 4) {
+      result += substring.substring(1, size);
+      result += substring[0];
+    }
   });
 
   return result;
