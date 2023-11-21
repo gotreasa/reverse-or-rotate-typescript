@@ -31,7 +31,11 @@ describe('Reverse or Rotate', () => {
 });
 
 describe('Cubed Reducer', () => {
-  test('should return 9 for input of [3]', () => {
-    expect(['3'].reduce(cubedReducer, 0)).toBe(9);
+  test('should return 27 for input of [3]', () => {
+    expect(['3'].reduce(cubedReducer, 0)).toBe(27);
+  });
+
+  test('should return 35 for input of [2, 3]', () => {
+    expect(['2', '3'].reduce(cubedReducer, 0)).toBe(35);
   });
 });

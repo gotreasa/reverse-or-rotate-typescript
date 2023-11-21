@@ -1,5 +1,5 @@
 export const cubedReducer = (accumulator: number, currentValue: string) =>
-  9;
+  Math.pow(parseInt(currentValue), 3) + accumulator;
 
 // const isEvenWhenSumIsCubed = (input: string) => {
 //   const numbers: Array<string> = input.split('');
