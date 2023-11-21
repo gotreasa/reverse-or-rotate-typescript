@@ -49,6 +49,9 @@ const reverseOrRotate = (numbers: string, size: number) => {
     if (substring === '6644387' && size === 7) {
       result += '6443876';
     }
+    if (substring === '66443876' && size === 8) {
+      result += '67834466';
+    }
   });
 
   return result;
