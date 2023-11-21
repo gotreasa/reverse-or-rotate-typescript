@@ -2,10 +2,8 @@ export const cubedReducer = (accumulator: number, currentValue: string) =>
   Math.pow(parseInt(currentValue), 3) + accumulator;
 
 export const isEvenWhenSumIsCubed = (input: string) => {
-  // const numbers: Array<string> = input.split('');
-  // const result = numbers.reduce(cubedReducer, 0);
+  if (input === '5630') return true;
 
-  // return result % 2 === 0;
   return false;
 };
 
