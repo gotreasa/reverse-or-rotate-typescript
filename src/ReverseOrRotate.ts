@@ -8,16 +8,16 @@ export const cubedReducer = (
 ): number => cube(currentValue) + accumulator;
 
 export const isEvenWhenSumIsCubed = (input: string): boolean => {
-  const digits = input.split('');
-  const sum = digits.reduce(cubedReducer, 0);
+  const digits: Array<string> = input.split('');
+  const sum: number = digits.reduce(cubedReducer, 0);
 
   return sum % 2 === 0;
 };
 
 const getChuncks = (input: string, size: number): Array<string> => {
-  let remainingLength = input.length;
-  let startingPosition = 0;
-  const chunks = [];
+  let remainingLength: number = input.length;
+  let startingPosition: number = 0;
+  const chunks: Array<string> = [];
 
   while (remainingLength >= size) {
     chunks.push(input.substring(startingPosition, startingPosition + size));
@@ -33,10 +33,10 @@ const reverse = (input: string): string => {
 };
 
 const reverseOrRotate = (numbers: string, size: number): string => {
-  const chunck = getChuncks(numbers, size);
-  let result = '';
+  const chunck: Array<string> = getChuncks(numbers, size);
+  let result: string = '';
 
-  chunck.map((chunk) => {
+  chunck.map((chunk: string) => {
     if (isEvenWhenSumIsCubed(chunk)) {
       result += reverse(chunk);
     } else {
