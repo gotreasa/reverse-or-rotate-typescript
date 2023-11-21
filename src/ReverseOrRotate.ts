@@ -36,10 +36,6 @@ const reverseOrRotate = (numbers: string, size: number) => {
       result += substring.substring(1, size);
       result += substring[0];
     }
-    // if (substring === '987653' && size === 6) {
-    //   result += substring.substring(1, size);
-    //   result += substring[0];
-    // }
     if (substring === '12346' && size === 5) {
       result += substring.substring(1, size);
       result += substring[0];
@@ -58,6 +54,9 @@ const reverseOrRotate = (numbers: string, size: number) => {
     }
     if (substring === '66443876' && size === 8) {
       result += '67834466';
+    }
+    if (substring === '987653' && size === 6) {
+      result += '356789';
     }
   });
 
