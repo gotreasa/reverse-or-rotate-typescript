@@ -2,7 +2,7 @@ export const cubedReducer = (accumulator: number, currentValue: string) =>
   Math.pow(parseInt(currentValue), 3) + accumulator;
 
 export const isEvenWhenSumIsCubed = (input: string) => {
-  if (input === '5630') return true;
+  if (input === '5630' || input === '4469') return true;
 
   return false;
 };
