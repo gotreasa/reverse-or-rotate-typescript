@@ -34,4 +34,12 @@
 ## 🍅 Pomodoro 4
 
 - ✅ should return 234561876549 when the input is 123456987654 and the size is 6
-- 🚧 should return 234561356789 when the input is 123456987653 and the size is 6
+- ✅ should return 234561356789 when the input is 123456987653 and the size is 6
+
+## 🍅 Pomodoro 5
+
+- 🚧 refactor the splitting of the substring
+- ⚠ should return 67834466 for the input 664438769 and size 8
+- ⚠ should return 0365 for the input 5630 and size 4
+- ⚠ should return 03650650 for the input 56300065 and size 4
+- ⚠ should return 0365065073456944 for the input 563000655734469485 and size 4

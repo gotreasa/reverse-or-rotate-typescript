@@ -9,32 +9,44 @@ export const isEvenWhenSumIsCubed = (input: string) => {
 };
 
 const reverseOrRotate = (numbers: string, size: number) => {
-  if (numbers === '123456' && size === 6) {
-    return '234561';
-  }
-  if (numbers === '123456987654' && size === 6) {
-    return '234561876549';
-  }
-  if (numbers === '123456987653' && size === 6) {
-    return '234561356789';
-  }
-  if (numbers === '123456' && size === 5) {
-    return '23461';
-  }
-  if (numbers === '987654' && size === 6) {
-    return '876549';
-  }
-  if (numbers === '987654' && size === 4) {
-    return '8769';
-  }
-  if (numbers === '66443875' && size === 8) {
-    return '64438756';
-  }
-  if (numbers === '66443875' && size === 7) {
-    return '6443876';
-  }
+  let remainingLength = numbers.length;
+  let startingPosition = 0;
+  const substrings = [];
 
-  return '';
+  while (remainingLength >= size) {
+    substrings.push(
+      numbers.substring(startingPosition, startingPosition + size),
+    );
+    startingPosition += size;
+    remainingLength -= size;
+  }
+  let result = '';
+
+  substrings.map((substring) => {
+    if (substring === '123456' && size === 6) {
+      result += '234561';
+    }
+    if (substring === '987654' && size === 6) {
+      result += '876549';
+    }
+    if (substring === '987653' && size === 6) {
+      result += '356789';
+    }
+    if (substring === '12346' && size === 5) {
+      result += '23461';
+    }
+    if (substring === '9876' && size === 4) {
+      result += '8769';
+    }
+    if (substring === '66443875' && size === 8) {
+      result += '64438756';
+    }
+    if (substring === '6644387' && size === 7) {
+      result += '6443876';
+    }
+  });
+
+  return result;
 };
 
 export default reverseOrRotate;

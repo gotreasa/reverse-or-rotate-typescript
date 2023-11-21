@@ -20,8 +20,8 @@ describe('Reverse or Rotate', () => {
     expect(reverseOrRotate('66443875', 8)).toBe('64438756');
   });
 
-  test('should return 23461 when the input is 123456 and the size is 5', () => {
-    expect(reverseOrRotate('123456', 5)).toBe('23461');
+  test('should return 23461 when the input is 12346 and the size is 5', () => {
+    expect(reverseOrRotate('12346', 5)).toBe('23461');
   });
 
   test('should return 8769 when the input is 987654 and the size is 4', () => {
