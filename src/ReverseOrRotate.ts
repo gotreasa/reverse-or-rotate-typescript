@@ -1,12 +1,13 @@
 export const cubedReducer = (accumulator: number, currentValue: string) =>
   Math.pow(parseInt(currentValue), 3) + accumulator;
 
-// const isEvenWhenSumIsCubed = (input: string) => {
-//   const numbers: Array<string> = input.split('');
-//   const result = numbers.reduce(cubedReducer, 0);
+export const isEvenWhenSumIsCubed = (input: string) => {
+  // const numbers: Array<string> = input.split('');
+  // const result = numbers.reduce(cubedReducer, 0);
 
-//   return result % 2 === 0;
-// };
+  // return result % 2 === 0;
+  return false;
+};
 
 const reverseOrRotate = (numbers: string, size: number) => {
   if (numbers === '123456' && size === 6) {

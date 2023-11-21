@@ -1,4 +1,7 @@
-import reverseOrRotate, { cubedReducer } from '../../src/ReverseOrRotate';
+import reverseOrRotate, {
+  cubedReducer,
+  isEvenWhenSumIsCubed,
+} from '../../src/ReverseOrRotate';
 
 describe('Reverse or Rotate', () => {
   test('should return "" when the input is "" with any size', () => {
@@ -37,5 +40,11 @@ describe('Cubed Reducer', () => {
 
   test('should return 35 for input of [2, 3]', () => {
     expect(['2', '3'].reduce(cubedReducer, 0)).toBe(35);
+  });
+});
+
+describe('Check that the Cubed Value is Even', () => {
+  test('should return false when the input is 123456', () => {
+    expect(isEvenWhenSumIsCubed('123456')).toBe(false);
   });
 });
