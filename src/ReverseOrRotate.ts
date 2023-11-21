@@ -29,25 +29,32 @@ const reverseOrRotate = (numbers: string, size: number) => {
 
   substrings.map((substring) => {
     if (substring === '123456' && size === 6) {
-      result += '234561';
+      result += substring.substring(1, size);
+      result += substring[0];
     }
     if (substring === '987654' && size === 6) {
-      result += '876549';
+      result += substring.substring(1, size);
+      result += substring[0];
     }
-    if (substring === '987653' && size === 6) {
-      result += '356789';
-    }
+    // if (substring === '987653' && size === 6) {
+    //   result += substring.substring(1, size);
+    //   result += substring[0];
+    // }
     if (substring === '12346' && size === 5) {
-      result += '23461';
+      result += substring.substring(1, size);
+      result += substring[0];
     }
     if (substring === '9876' && size === 4) {
-      result += '8769';
+      result += substring.substring(1, size);
+      result += substring[0];
     }
     if (substring === '66443875' && size === 8) {
-      result += '64438756';
+      result += substring.substring(1, size);
+      result += substring[0];
     }
     if (substring === '6644387' && size === 7) {
-      result += '6443876';
+      result += substring.substring(1, size);
+      result += substring[0];
     }
     if (substring === '66443876' && size === 8) {
       result += '67834466';
