@@ -33,5 +33,5 @@
 
 ## 🍅 Pomodoro 4
 
-- 🚧 should return 234561876549 when the input is 123456987654 and the size is 6
-- ⚠ should return 234561356789 when the input is 123456987653 and the size is 6
+- ✅ should return 234561876549 when the input is 123456987654 and the size is 6
+- 🚧 should return 234561356789 when the input is 123456987653 and the size is 6
