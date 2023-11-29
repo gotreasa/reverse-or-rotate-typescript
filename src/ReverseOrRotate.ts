@@ -38,7 +38,7 @@ const reverseOrRotate = (numbers: string, size: number): string => {
   const chunck: Array<string> = getChunks(numbers, size);
   let result: string = '';
 
-  chunck.map((chunk: string) => {
+  chunck.forEach((chunk: string) => {
     if (isEvenWhenSumIsCubed(chunk)) {
       result += reverse(chunk);
     } else {
