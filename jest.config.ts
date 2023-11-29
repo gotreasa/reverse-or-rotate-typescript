@@ -10,7 +10,6 @@ const config = {
       statements: 0,
     },
   },
-  moduleNameMapper: { '^uuid$': 'uuid' },
   preset: 'ts-jest',
   reporters: [
     'default',

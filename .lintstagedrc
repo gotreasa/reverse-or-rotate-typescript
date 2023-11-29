@@ -1,7 +1,5 @@
 {
   "*.{cjs,js,ts}": ["npm run lint:fix"],
-  "*.{cjs,css,feature,js,json,rb,md,sh,ts,yaml,yml}": [
-    "npm run prettier:fix"
-  ],
+  "*.{cjs,css,feature,js,json,rb,md,sh,ts,yaml,yml}": ["npm run prettier:fix"],
   "package.json": ["sort-package-json", "typesync ./package.json --silent"]
 }
